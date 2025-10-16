@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Recipe Box</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Our Recipe Box</h1>
+    <input id="q" placeholder="Search (title, ingredient…)" />
+  </header>
+  <main id="grid" aria-live="polite"></main>
+
+  <template id="card-tpl">
+    <article class="card">
+      <img class="thumb" alt="" />
+      <div class="content">
+        <h2 class="title"></h2>
+        <p class="meta"></p>
+        <ul class="ingredients"></ul>
+        <details>
+          <summary>Steps</summary>
+          <ol class="steps"></ol>
+        </details>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

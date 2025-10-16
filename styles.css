@@ -1,0 +1,13 @@
+:root { --gap: 14px; --radius: 14px; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 0; background: #fafafa; }
+header { position: sticky; top: 0; background: #fff; padding: 16px; border-bottom: 1px solid #eee; }
+#q { width: 100%; padding: 12px; border-radius: var(--radius); border: 1px solid #ddd; }
+#grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--gap); padding: 16px; }
+.card { background: #fff; border: 1px solid #eee; border-radius: var(--radius); overflow: hidden; display: grid; grid-template-rows: 180px auto; }
+.card img { width: 100%; height: 180px; object-fit: cover; background: #eee; }
+.card .content { padding: 12px 14px 16px; }
+.card h2 { margin: 0 0 8px; font-size: 1.1rem; }
+.card .meta { color: #666; font-size: .9rem; margin: 0 0 10px; }
+.ingredients, .steps { margin: 0; padding-left: 18px; }
+details summary { cursor: pointer; margin-top: 8px; }
