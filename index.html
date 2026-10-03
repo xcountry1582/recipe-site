@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Recipe Book</h1>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search recipes, ingredients, steps…" aria-label="Search recipes" autocomplete="off" />
+      <select id="sort" aria-label="Sort recipes">
+        <option value="new">Newest first</option>
+        <option value="old">Oldest first</option>
+        <option value="az">Title A–Z</option>
+        <option value="za">Title Z–A</option>
+      </select>
+    </div>
+    <div id="results-meta" class="meta" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <div class="loadmore-wrap">
+      <button id="loadMore" class="btn" hidden>Load more</button>
+    </div>
+  </main>
+
+  <template id="card-tpl">
+    <article class="card">
+      <a class="thumb-link" href="#" aria-label="Open recipe">
+        <img class="thumb" alt="" loading="lazy" />
+      </a>
+      <div class="card-body">
+        <h2 class="title"></h2>
+        <p class="snippet"></p>
+        <div class="meta-row">
+          <span class="date"></span>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <!-- Lightweight modal for details -->
+  <dialog id="modal" class="modal">
+    <button id="closeModal" class="close" aria-label="Close">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
