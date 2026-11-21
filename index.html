@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hambone’s Family Recipes</title>
+  <meta name="description" content="Our family recipe book. Find recipes by name or the ingredients you already have, with clear ingredients and cooking instructions." />
+  <link rel="stylesheet" href="./styles.css?v=notes-1" />
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">OUR FAMILY KITCHEN</p>
+    <h1>Hambone’s Family Recipes</h1>
+    <p class="intro">Find a favorite. Make something delicious.</p>
+    <form id="searchForm" class="controls" role="search">
+      <label>Find a recipe<input id="search" type="search" placeholder="Chicken pasta, ranch, bacon…" autocomplete="off" maxlength="150" /></label>
+      <label>Ingredients you have<input id="ingredients" type="search" placeholder="Chicken, onions, cheese…" autocomplete="off" maxlength="300" aria-describedby="search-help" /></label>
+      <button class="btn" type="submit">Find recipes</button>
+    </form>
+    <p id="search-help" class="search-help">Use commas to list ingredients. Results include all the ingredients you enter.</p>
+    <details class="allergy-panel" id="allergy-panel">
+      <summary>Food allergies &amp; ingredients to avoid <span id="allergy-count"></span></summary>
+      <fieldset id="allergens" aria-describedby="allergy-help">
+        <legend>Exclude recipes with any selected allergen</legend>
+        <div class="allergy-options">
+          <label><input type="checkbox" value="milk"> Milk / dairy</label>
+          <label><input type="checkbox" value="egg"> Eggs</label>
+          <label><input type="checkbox" value="fish"> Fish</label>
+          <label><input type="checkbox" value="shellfish"> Shellfish</label>
+          <label><input type="checkbox" value="tree_nuts"> Tree nuts</label>
+          <label><input type="checkbox" value="peanut"> Peanuts</label>
+          <label><input type="checkbox" value="wheat"> Wheat</label>
+          <label><input type="checkbox" value="soy"> Soy</label>
+          <label><input type="checkbox" value="sesame"> Sesame</label>
+          <label><input type="checkbox" value="chicken"> Chicken (not turkey)</label>
+        </div>
+      </fieldset>
+      <label class="avoid-label" for="avoid">Other ingredients to avoid</label>
+      <input id="avoid" type="text" maxlength="300" placeholder="For example: coconut, strawberries" aria-describedby="avoid-help">
+      <p id="avoid-help" class="search-help">Separate ingredients with commas. This matches the words in the ingredient list.</p>
+      <label class="label-check-option"><input type="checkbox" id="hide-label-checks"> Also hide recipes with packaged ingredients that need a label check</label>
+      <p id="allergy-help" class="search-help">Screening uses recipe ingredient names, including optional ingredients. It cannot confirm product ingredients or cross-contact. Check every ingredient label before cooking. Wheat filtering is not a gluten-free check.</p>
+      <button type="button" id="clear-allergies" class="clear-allergies">Clear allergy filters</button>
+    </details>
+    <div id="results-meta" class="meta" aria-live="polite"></div>
+    <button class="btn" id="retry" type="button" hidden>Try again</button>
+  </header>
+
+  <main>
+    <section id="grid" class="grid" aria-label="Recipes" aria-live="polite"></section>
+    <div id="empty-state" class="empty-state" hidden></div>
+    <div class="loadmore-wrap">
+      <button id="loadMore" class="btn" hidden>Load more</button>
+    </div>
+  </main>
+  <footer>Good food. Shared memories. Our family recipe book.</footer>
+
+  <template id="card-tpl">
+    <article class="card">
+      <button class="tile-button" type="button">
+      <span class="thumb-link">
+        <img class="thumb" alt="" loading="lazy" />
+      </span>
+      <div class="card-body">
+        <h2 class="title"></h2>
+        <p class="snippet"></p>
+        <span class="meta-row">
+          <span class="date"></span>
+          <span class="view-recipe">View recipe &rarr;</span>
+        </span>
+      </div>
+      </button>
+    </article>
+  </template>
+
+  <!-- Lightweight modal for details -->
+  <dialog id="modal" class="modal" aria-labelledby="recipe-title">
+    <button id="closeModal" class="close" aria-label="Close">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <footer style="text-align:center;padding:24px"><a href="/admin/index.html">Recipe admin</a></footer>
+  <script src="./app.js?v=full-catalog-notes-1" type="module"></script>
+</body>
+</html>
