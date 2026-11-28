@@ -1,0 +1,32 @@
+{
+  "id": "facebook-4330435063933985",
+  "title": "Chicken Bacon Ranch Pasta Salad",
+  "status": "published",
+  "ingredients": [
+    "1 pound rotini pasta",
+    "2–3 pounds boneless, skinless chicken thighs",
+    "Barbecue seasoning, as needed",
+    "1 pound cooked bacon, chopped",
+    "8 ounces grated Colby Jack cheese",
+    "1 bunch sliced green onions",
+    "½–1 cup ranch dressing",
+    "Shredded lettuce (optional)"
+  ],
+  "steps": [
+    "Boil the rotini following its package directions; drain, rinse cold, and cool.",
+    "Season the thighs with barbecue rub. Grill over medium-high heat to the creator’s specified 175–185°F internal temperature; rest 5–10 minutes, then dice.",
+    "Combine the pasta, chicken, cooked bacon, cheese, half the onions, and some dressing. Toss, adding dressing to taste.",
+    "Refrigerate covered for at least 30 minutes.",
+    "Add the remaining onions and optional lettuce shortly before serving. Serve cold."
+  ],
+  "servings": 8,
+  "prep_time": "20 minutes",
+  "cook_time": "20 minutes",
+  "notes": "Allow at least 30 minutes of chilling in addition to preparation and cooking.",
+  "source": {
+    "creator": "Brian Gerwig / G’bque",
+    "recipe_url": "https://gbque.com/chicken-bacon-ranch-pasta-salad/",
+    "video_url": "https://www.facebook.com/reel/4330435063933985"
+  },
+  "media": {"thumb": "media/thumbs/4330435063933985.jpg"}
+}
